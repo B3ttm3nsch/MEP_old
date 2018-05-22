@@ -1,0 +1,28 @@
+%div{"ng-controller" => "ProjectController"}
+  .row
+    .col-lg-12.col-sm-12
+      .well.well-lg{:style => "margin-top:0px;height:auto;background-color:ghostwhite;"}
+        %table.table.table-striped.table-hover.table-condensed{:style => "table-layout:fixed;width:100%;", :cellpadding => 4}
+          %thead
+          %tbody
+            %tr{:style => "background-color:white;"}
+
+              %td{:width => 10, :rowspan => 4}
+              %td{:colspan => 10}
+                %span{:style => "font-size:1.9em;padding-left: 10px;"}{{selectedProject.title}}
+                %span{:style => "font-size: 1.2em;margin-left: 21px;"} {{selectedProject.subtitle}}
+                %span{:style => "font-size:0.9em;"} | {{selectedProject.client.name}}
+
+              %td.center{:colspan => 1, :style => "color:gray;font-size:0.8em;valign:bottom;"}
+
+              %td.right{:colspan => 4, :rowspan => 1}
+                %span{:style => "color:gray;font-size:1.2em;valign:top;padding-right: 10px;"}
+                  {{selectedProject.ProjectID}} | {{selectedProject.id}}
+        %hr
+
+        %ul.nav.nav-pills
+
+          %li{:role => "presentation", "ng-class" => "{ active: isCurrentPath('/projects/{{project_id}}/mep') }"}
+            %a{ "ui-sref" => "#project.mep" } MEP
+
+  %div{"ui-view" => "info"}
