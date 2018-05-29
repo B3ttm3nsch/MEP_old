@@ -1,7 +1,7 @@
 class CreateBsagAudioFaults < ActiveRecord::Migration
   def change
     create_table :bsag_audio_faults do |t|
-      t.string :name, limit: 30
+      t.string :name, limit: 30, null: false
 
       t.timestamps null: false
     end

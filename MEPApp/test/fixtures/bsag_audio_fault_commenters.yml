@@ -2,10 +2,10 @@
 
 one:
   comment: MyString
-  bsag_audio_fault_id: 
-  bsag_mep_audio_id: 
+  BsagMepAudio_id: 
+  BsagAudioFault_id: 
 
 two:
   comment: MyString
-  bsag_audio_fault_id: 
-  bsag_mep_audio_id: 
+  BsagMepAudio_id: 
+  BsagAudioFault_id: 
