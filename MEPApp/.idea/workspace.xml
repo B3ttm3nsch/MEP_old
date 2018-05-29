@@ -29,8 +29,8 @@
       <file leaf-file-name="20180529112142_create_bsag_audio_speeds.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180529112142_create_bsag_audio_speeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/db/migrate/20180529110849_create_bsag_audio_types.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="44" />
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -74,17 +74,17 @@
       <file leaf-file-name="20180529132012_create_bsag_mep_audios.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20180529132012_create_bsag_mep_audios.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20180529145950_create_bsag_audio_fault_commenters.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20180529145950_create_bsag_audio_fault_commenters.rb">
+      <file leaf-file-name="20180529155807_create_bsag_audio_fault_commenters.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180529155807_create_bsag_audio_fault_commenters.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="150">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -137,15 +137,16 @@
         <option value="$PROJECT_DIR$/app/controllers/partials_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/bsag_project_partial.rb" />
         <option value="$PROJECT_DIR$/app/models/bsag_product_category.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20180529110849_create_bsag_audio_types.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529111007_create_bsag_audio_formats.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529111134_create_bsag_mep_versions.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20180529112142_create_bsag_audio_speeds.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529112847_create_bsag_channel_errors.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529115859_create_bsag_audio_faults.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529125647_create_bsag_mep_evaluations.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180529110849_create_bsag_audio_types.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529132012_create_bsag_mep_audios.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180529112142_create_bsag_audio_speeds.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180529145950_create_bsag_audio_fault_commenters.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180529155807_create_bsag_audio_fault_commenters.rb" />
       </list>
     </option>
   </component>
@@ -408,12 +409,12 @@
       <workItem from="1527062534401" duration="5535000" />
       <workItem from="1527580162112" duration="9978000" />
       <workItem from="1527605394588" duration="150000" />
-      <workItem from="1527605671916" duration="1117000" />
+      <workItem from="1527605671916" duration="3019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21876000" />
+    <option name="totallyTimeSpent" value="23778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="23" width="1171" height="975" extended-state="0" />
@@ -451,13 +452,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529115859_create_bsag_audio_faults.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180529125647_create_bsag_mep_evaluations.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -721,35 +715,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529111007_create_bsag_audio_formats.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529110849_create_bsag_audio_types.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529111134_create_bsag_mep_versions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529112142_create_bsag_audio_speeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529112847_create_bsag_channel_errors.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529125647_create_bsag_mep_evaluations.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
@@ -763,17 +729,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529125647_create_bsag_mep_evaluations.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529111007_create_bsag_audio_formats.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529111134_create_bsag_mep_versions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529112847_create_bsag_channel_errors.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180529132012_create_bsag_mep_audios.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529110849_create_bsag_audio_types.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529112142_create_bsag_audio_speeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -781,6 +768,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529132012_create_bsag_mep_audios.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180529155807_create_bsag_audio_fault_commenters.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>

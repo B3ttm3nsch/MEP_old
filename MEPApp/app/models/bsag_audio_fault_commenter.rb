@@ -1,4 +1,4 @@
 class BsagAudioFaultCommenter < ActiveRecord::Base
-  belongs_to :BsagMepAudio
-  belongs_to :BsagAudioFault
+  belongs_to :bsag_mep_audio
+  belongs_to :bsag_audio_fault
 end

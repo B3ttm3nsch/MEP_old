@@ -2,7 +2,7 @@ class CreateBsagMepAudios < ActiveRecord::Migration
   def change
     create_table :bsag_mep_audios do |t|
       t.references :bsag_project_partial, null: false, index: true, foreign_key: true
-      t.references :bsag_audio_type, index, null: false: true, foreign_key: true
+      t.references :bsag_audio_type, null: false, index: true, foreign_key: true
       t.date :receiving_date, null: false
       t.references :bsag_mep_version, null: false, index: true, foreign_key: true
       t.string :version_comment, limit: 30
