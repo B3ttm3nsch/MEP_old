@@ -19,7 +19,7 @@
 //= require angular-ui-router
 //= require angular-ui-bootstrap-datetimepicker
 //= require angular-sanitize
-//= require ngular-material
+//= require angular-material
 //= require bootstrap-sass-official
 //
 //= require jquery

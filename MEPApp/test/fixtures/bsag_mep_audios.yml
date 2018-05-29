@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsag_project_partial_id: 
+  bsag_audio_type_id: 
+  receiving_date: 2018-05-29
+  bsag_mep_version_id: 
+  version_comment: MyString
+  bsag_audio_format_id: 
+  bsag_audio_speed_id: 
+  is_complete: false
+  is_complete_comment: MyString
+  is_in_sync: false
+  is_in_sync_comment: MyString
+  dbtp_max: 9.99
+  lra: 9.99
+  lufs: 9.99
+  bsag_channel_error_id: 
+  channel_error_comment: MyString
+  bsag_mep_evaluation_id: 
+
+two:
+  bsag_project_partial_id: 
+  bsag_audio_type_id: 
+  receiving_date: 2018-05-29
+  bsag_mep_version_id: 
+  version_comment: MyString
+  bsag_audio_format_id: 
+  bsag_audio_speed_id: 
+  is_complete: false
+  is_complete_comment: MyString
+  is_in_sync: false
+  is_in_sync_comment: MyString
+  dbtp_max: 9.99
+  lra: 9.99
+  lufs: 9.99
+  bsag_channel_error_id: 
+  channel_error_comment: MyString
+  bsag_mep_evaluation_id: 
