@@ -1,7 +1,7 @@
 class CreateBsagAudioTypes < ActiveRecord::Migration
   def change
     create_table :bsag_audio_types do |t|
-      t.string :name, limit: 10, null: false
+      t.string :name, limit: 20, null: false
 
       t.timestamps null: false
     end
