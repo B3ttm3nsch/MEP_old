@@ -1,0 +1,14 @@
+%h1 Listing Partials
+
+%table
+  .container-fluid
+    .table-responsive
+      .table
+        %thead
+          %tr
+            %th Id
+
+        %tbody
+          - @partials.each do |partial|
+            %tr
+              %td= partial.id

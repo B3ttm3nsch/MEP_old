@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsag_mep_audio_id: 
+  bsag_audio_fault_id: 
+  comment: MyString
+
+two:
+  bsag_mep_audio_id: 
+  bsag_audio_fault_id: 
+  comment: MyString

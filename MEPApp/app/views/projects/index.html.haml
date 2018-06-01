@@ -1,0 +1,14 @@
+%h1 Listing Projects
+
+%table
+  .container-fluid
+    .table-responsive
+      .table
+        %thead
+          %tr
+            %th Id
+
+        %tbody
+          - @projects.each do |project|
+            %tr
+              %td= project.__id__
