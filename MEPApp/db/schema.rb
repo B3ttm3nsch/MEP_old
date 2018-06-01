@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529155807) do
+ActiveRecord::Schema.define(version: 20180601090603) do
 
-  create_table "bsag_audio_fault_commenters", force: :cascade do |t|
-    t.string   "comment",             limit: 255
+  create_table "bsag_audio_fault_comments", force: :cascade do |t|
     t.integer  "bsag_mep_audio_id",   limit: 4,   null: false
     t.integer  "bsag_audio_fault_id", limit: 4,   null: false
+    t.string   "comment",             limit: 255
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end
 
-  add_index "bsag_audio_fault_commenters", ["bsag_audio_fault_id"], name: "index_bsag_audio_fault_commenters_on_bsag_audio_fault_id", using: :btree
-  add_index "bsag_audio_fault_commenters", ["bsag_mep_audio_id"], name: "index_bsag_audio_fault_commenters_on_bsag_mep_audio_id", using: :btree
+  add_index "bsag_audio_fault_comments", ["bsag_audio_fault_id"], name: "index_bsag_audio_fault_comments_on_bsag_audio_fault_id", using: :btree
+  add_index "bsag_audio_fault_comments", ["bsag_mep_audio_id"], name: "index_bsag_audio_fault_comments_on_bsag_mep_audio_id", using: :btree
 
   create_table "bsag_audio_faults", force: :cascade do |t|
     t.string   "name",       limit: 30, null: false
@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 20180529155807) do
   add_index "bsag_audio_speeds", ["speed"], name: "index_bsag_audio_speeds_on_speed", unique: true, using: :btree
 
   create_table "bsag_audio_types", force: :cascade do |t|
-    t.string   "name",       limit: 10, null: false
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.string   "name",       limit: 20, default: "", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   add_index "bsag_audio_types", ["name"], name: "index_bsag_audio_types_on_name", unique: true, using: :btree
@@ -69,7 +69,8 @@ ActiveRecord::Schema.define(version: 20180529155807) do
     t.integer  "bsag_audio_type_id",      limit: 4,                           null: false
     t.date     "receiving_date",                                              null: false
     t.integer  "bsag_mep_version_id",     limit: 4,                           null: false
-    t.string   "version_comment",         limit: 30
+    t.integer  "version_number",          limit: 2,                           null: false
+    t.string   "version_name_ext",        limit: 30
     t.integer  "bsag_audio_format_id",    limit: 4,                           null: false
     t.integer  "bsag_audio_speed_id",     limit: 4,                           null: false
     t.boolean  "is_complete"
@@ -261,8 +262,8 @@ ActiveRecord::Schema.define(version: 20180529155807) do
   add_index "tblprojects", ["product_id"], name: "iProduct", using: :btree
   add_index "tblprojects", ["product_variation_id"], name: "iProductVariation", using: :btree
 
-  add_foreign_key "bsag_audio_fault_commenters", "bsag_audio_faults"
-  add_foreign_key "bsag_audio_fault_commenters", "bsag_mep_audios"
+  add_foreign_key "bsag_audio_fault_comments", "bsag_audio_faults"
+  add_foreign_key "bsag_audio_fault_comments", "bsag_mep_audios"
   add_foreign_key "bsag_mep_audios", "bsag_audio_formats"
   add_foreign_key "bsag_mep_audios", "bsag_audio_speeds"
   add_foreign_key "bsag_mep_audios", "bsag_audio_types"

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BsagAudioFaultCommenterTest < ActiveSupport::TestCase
+class BsagAudioFaultCommentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
