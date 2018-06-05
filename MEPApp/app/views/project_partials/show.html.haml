@@ -1,0 +1,4 @@
+%h1= @project_partial.title
+
+%p
+  = link_to 'MEPs', project_project_partial_meps_path(:project_id => @project_partial.project_id, :project_partial_id => @project_partial.id)
