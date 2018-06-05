@@ -7,8 +7,12 @@
         %thead
           %tr
             %th Id
+            %th Name
+            %th show
 
         %tbody
           - @projects.each do |project|
             %tr
-              %td= project.__id__
+              %td= project.id
+              %td= project.Name
+              %td= link_to 'Show', project_path(project)

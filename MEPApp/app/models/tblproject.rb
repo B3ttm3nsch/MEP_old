@@ -4,6 +4,7 @@ class Tblproject < ActiveRecord::Base
   belongs_to :category, :class_name => "BsagProductCategory"
   belongs_to :product, :class_name => "BsagProduct", :foreign_key => "product_id"
   belongs_to :product_variation, :class_name => "BsagProductVariation", :foreign_key => "product_variation_id"
+  has_many :project_partials, :class_name => "BsagProjectPartial", :foreign_key => "project_id"
 
   def to_dict
     d = {}

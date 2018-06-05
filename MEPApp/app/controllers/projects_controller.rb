@@ -10,4 +10,8 @@ class ProjectsController < ActionController::Base
     #   format.json { render json: projects }
     # end
   end
+
+  def show
+    @project = Tblproject.find(params[:id])
+  end
 end

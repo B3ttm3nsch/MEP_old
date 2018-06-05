@@ -1,0 +1,24 @@
+%h1
+  %strong Project
+  = @project.Name
+%h2
+  %h2 Partials
+
+%table
+  .container-fluid
+    .table-responsive
+      .table
+        %thead
+          %tr
+            %th ID
+            %th Name
+            %th MEP
+
+        %tbody
+          - @project.project_partials.each do |project_partial|
+            %tr
+              %td= project_partial.id
+              %td= project_partial.title
+              %td= link_to 'Show', project_project_partial_path(project_partial.project_id, project_partial.id)
+%p
+  = link_to 'Back', projects_path
