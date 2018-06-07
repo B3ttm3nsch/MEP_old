@@ -1,0 +1,60 @@
+= form_for @mep_audio, url: {action: "create"} do |form|
+  %p
+    = form.label :bsag_mep_version_id, "Audio Typ"
+    = form.collection_select :bsag_audio_type_id, BsagAudioType.order(:id),:id,:name
+  %p
+    = form.label :receiving_date
+    = form.date_select :receiving_date
+  %p
+    = form.label :bsag_mep_version_id, "Audio Version"
+    = form.collection_select :bsag_mep_version_id, BsagMepVersion.order(:id),:id,:name
+  %p
+    = form.label :version_number, "Versionsnummer"
+    = form.select :version_number, (0..9)
+  %p
+    = form.label :version_name_ext, "Externer Name"
+    = form.text_field :version_name_ext
+  %p
+    = form.label :bsag_audio_format_id, "Audioformat"
+    = form.collection_select :bsag_audio_format_id, BsagMepVersion.order(:id),:id,:name
+  %p
+    = form.label :bsag_audio_speed_id, "Geschwindigkeit"
+    = form.collection_select :bsag_audio_speed_id, BsagMepVersion.order(:id),:id,:name
+  %p
+    = form.label :bsag_audio_format_id, "Audioformat"
+    = form.collection_select :bsag_audio_format_id, BsagMepVersion.order(:id),:id,:name
+  %p
+    = form.label :is_complete, "Vollständig"
+    = form.check_box :is_complete
+  %p
+    = form.label :is_complete_comment, "Kommentar"
+    = form.text_field :is_complete_comment
+  %p
+    = form.label :is_in_sync, "Synchron"
+    = form.check_box :is_in_sync
+  %p
+    = form.label :is_in_sync_comment, "Synchron"
+    = form.text_field :is_in_sync_comment
+  %p
+    = form.label :dbtp_max
+    = form.text_field :dbtp_max
+  %p
+    = form.label :lra
+    = form.text_field :lra
+  %p
+    = form.label :lufs
+    = form.text_field :lufs
+  %p
+    = form.label :dbtp_max
+    = form.text_field :dbtp_max
+  %p
+    = form.label :bsag_channel_error_id, "Kanalfehler"
+    = form.collection_select :bsag_channel_error_id, BsagChannelError.order(:id),:id,:name
+  %p
+    = form.label :bsag_mep_evaluation_id, "Bewertung"
+    = form.collection_select :bsag_mep_version_id, BsagMepEvaluation.order(:id),:id,:name
+  %p
+    -#= form.collection_select new.bsag_audio_fault_id, BsagAudioFault.order(:id),:id,:name
+
+  %p
+    = form.submit

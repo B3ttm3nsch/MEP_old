@@ -1,8 +1,4 @@
-%h1
-  %strong Project
-  = @project_partials.project.aka_title
-%h2
-  %h2 Partials
+%h2 Partials
 
 %table
   .container-fluid
@@ -12,7 +8,7 @@
           %tr
             %th ID
             %th Name
-            %th MEP
+            %th To Partial
 
         %tbody
           - @project_partials.each do |project_partial|

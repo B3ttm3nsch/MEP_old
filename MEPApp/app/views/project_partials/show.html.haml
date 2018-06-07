@@ -1,4 +1,5 @@
-%h1= @project_partial.title
+%h1= @project_partial.project.Name
+%h2= @project_partial.title
 
-%p
-  = link_to 'MEPs', project_project_partial_meps_path(:project_id => @project_partial.project_id, :project_partial_id => @project_partial.id)
+%h3 MEPs
+= link_to 'Meps', project_project_partial_mep_audios_path(@project_partial.project_id, @project_partial)
