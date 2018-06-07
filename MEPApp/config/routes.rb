@@ -55,9 +55,21 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :projects do
-    resources :project_partials do
-      resources :mep_audios
+  #
+  #resources :projects do
+   # resources :project_partials do
+    #  resources :mep_audios do
+     #   get 'fault_comments', on: :member
+      #end
+    #end
+  #end
+  MEPApp::Application.routes.draw do
+    resources :projects do
+      resources :project_partials do
+        resources :mep_audios do
+          get 'fault_comments', on: :member
+        end
+      end
     end
   end
 
