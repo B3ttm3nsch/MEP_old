@@ -7,7 +7,7 @@
     = form.date_select :receiving_date
   %p
     = form.label :bsag_mep_version_id, "Audio Version"
-    = form.collection_select :bsag_mep_version_id, BsagMepVersion.order(:id),:id,:name, disabled: non_editable
+    = form.collection_select :bsag_mep_version_id, BsagMepVersion.order(:id),:id,:name
   %p
     = form.label :version_number, "Versionsnummer"
     = form.select :version_number, (0..9)
@@ -46,8 +46,8 @@
     = form.label :bsag_mep_evaluation_id, "Bewertung"
     = form.collection_select :bsag_mep_evaluation_id, BsagMepEvaluation.order(:id),:id,:name
   %p
-    = render 'audio_fault_comments/audio_fault_comment', :audio_fault_comments => @mep_audio.audio_fault_comments
+    = render 'audio_fault_comments/audio_fault_comment', :audio_fault_comments => @mep_audio.audio_fault_comments, form: form
   %p
-    -#= render 'audio_fault_comments/form'
+    = render 'audio_fault_comments/form', :locals => {:controller => 'audio_fault_comments', :action => "create"}
   %p
     = form.button :submit, name: :create
