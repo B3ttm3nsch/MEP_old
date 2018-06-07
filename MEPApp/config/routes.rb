@@ -57,7 +57,7 @@ Rails.application.routes.draw do
   #   end
   resources :projects do
     resources :project_partials do
-      resources :meps
+      resources :mep_audios
     end
   end
 

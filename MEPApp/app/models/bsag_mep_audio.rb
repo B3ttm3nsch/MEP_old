@@ -6,6 +6,8 @@ class BsagMepAudio < ActiveRecord::Base
   belongs_to :audio_speed, :class_name => "BsagAudioSpeed"
   belongs_to :channel_error, :class_name => "BsagChannelError"
   belongs_to :evaluation, :class_name => "BsagMepEvaluation"
+  has_many :fault_comments, :class_name => "BsagAudioFaultComment"
+  has_many :bsag_audio_faults, :class_name => "BsagAudioFault", through: :fault_comments
 
   validates :version_number, :uniqueness => { :scope => [:project_partial, :mep_version] }
 end
