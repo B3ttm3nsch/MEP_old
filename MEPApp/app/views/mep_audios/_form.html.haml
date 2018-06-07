@@ -49,11 +49,7 @@
     = form.label :bsag_mep_evaluation_id, "Bewertung"
     = form.collection_select :bsag_mep_version_id, BsagMepEvaluation.order(:id),:id,:name
   %p
-    = form.fields_for @fault_comment do |fault|
-      = fault.label :bsag_audio_fault_id, "Störung"
-      = fault.collection_select :bsag_audio_fault_id, BsagAudioFault.order(:id), :id, :name
-      = fault.label :comment, "Kommentar"
-      = fault.text_field :comment
+
 
   %p
     = form.submit
