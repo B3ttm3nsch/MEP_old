@@ -1,6 +1,4 @@
-=# form_for [ @mep_audio, @mep_audio.audio_fault_comments.build ] do |fault_comment|
-
-= form_for(:post, :url => url_for(:controller => locals[:controller], :action => locals[:action]), html: {class: ""} ) do |fault_comment|
+-#= form_for(:post, :url => url_for(:controller => locals[:controller], :action => locals[:action]), html: {class: ""} ) do |fault_comment|
 
   %p
     = fault_comment.label :bsag_audio_fault_id
@@ -9,3 +7,15 @@
     = fault_comment.text_field :comment
 
     = fault_comment.submit
+
+
+  = f.label :bsag_audio_fault_id
+  = f.collection_select :bsag_audio_fault_id, BsagAudioFault.order(:name), :id, :name
+  = f.label :comment
+  = f.text_field :comment
+
+= fo.fields_for @mep_audio.audio_fault_comments.build do |f|
+  = f.label :bsag_audio_fault_id
+  = f.collection_select :bsag_audio_fault_id, BsagAudioFault.order(:name), :id, :name
+  = f.label :comment
+  = f.text_field :comment

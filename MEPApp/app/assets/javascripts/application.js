@@ -11,16 +11,16 @@
 // about supported directives.
 //
 // http://growingdevs.com/stop-using-rubygems-and-start-using-bower.html
-//= require angular
-//= require angular-animate
-//= require angular-aria
-//= require angular-filter
-//= require angular-bootstrap
-//= require angular-ui-router
-//= require angular-ui-bootstrap-datetimepicker
-//= require angular-sanitize
-//= require angular-material
-//= require bootstrap-sass-official
+// require angular
+// require angular-animate
+// require angular-aria
+// require angular-filter
+// require angular-bootstrap
+// require angular-ui-router
+// require angular-ui-bootstrap-datetimepicker
+// require angular-sanitize
+// require angular-material
+// require bootstrap-sass-official
 //
 //= require jquery
 //= require jquery_ujs

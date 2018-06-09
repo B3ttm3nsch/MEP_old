@@ -56,21 +56,21 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   #
-  #resources :projects do
-   # resources :project_partials do
-    #  resources :mep_audios do
-     #   get 'fault_comments', on: :member
-      #end
-    #end
-  #end
-  MEPApp::Application.routes.draw do
-    resources :projects do
-      resources :project_partials do
-        resources :mep_audios do
-          resources :audio_fault_comments
-        end
+  resources :projects do
+    resources :project_partials do
+      resources :mep_audios do
+        get 'audio_fault_comments', on: :member
       end
     end
   end
+  #MEPApp::Application.routes.draw do
+   # resources :projects do
+    #  resources :project_partials do
+     #   resources :mep_audios do
+      #    resources :audio_fault_comments
+       # end
+      #end
+    #end
+  #end
 
 end

@@ -1,15 +1,18 @@
 class MepAudiosController < ActionController::Base
   def index
-    @mep_audios = BsagProjectPartial.find(params[:project_partial_id]).mep_audios
+    @project_partial = BsagProjectPartial.find(params[:project_id])
+    @mep_audios = @project_partial.mep_audios.all
+    # @mep_audios = BsagProjectPartial.find(params[:project_partial_id]).mep_audios
     #@project_partials = Tblproject.find(params[:project_id]).project_partials
   end
 
   def show
-    @mep_audio = BsagProjectPartial.find(params[:id])
+    @mep_audio = BsagMepAudio.find(params[:id])
   end
 
   def new
     @mep_audio = BsagMepAudio.new
+    @audio_fault_comments = @mep_audio.audio_fault_comments.build
   end
 
   def edit
@@ -22,15 +25,15 @@ class MepAudiosController < ActionController::Base
     if @mep_audio.save
       redirect_to project_project_partial_mep_audios_path
     else
-      render 'edit'
+      render 'new'
     end
   end
 
   def update
     @mep_audio = BsagMepAudio.find(params[:id])
 
-    if @mep_audio.updated(mep_audio_params)
-      redirect_to @mep_audio
+    if @mep_audio.update(mep_audio_params)
+      redirect_to project_project_partial_mep_audios_path
     else
       render 'edit'
     end
@@ -39,7 +42,6 @@ class MepAudiosController < ActionController::Base
   def destroy
     @mep_audio = BsagMepAudio.find(params[:id])
     @mep_audio.destroy
-
     redirect_to project_project_partial_mep_audios_path
   end
 

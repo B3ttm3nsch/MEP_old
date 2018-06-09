@@ -1,3 +1,7 @@
-%g1 Anzeige
+%h1 Anzeige
 
-= render 'form'
+%h2 Fehler
+-#= render @mep_audio.audio_fault_comments
+
+%h2 Hinzufügen
+= render 'audio_fault_comments/form'

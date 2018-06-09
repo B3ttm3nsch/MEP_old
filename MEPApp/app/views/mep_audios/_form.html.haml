@@ -1,4 +1,15 @@
-= form_for @mep_audio, url: {action: "create"} do |form|
+-#= form_for @mep_audio, url: {action: "create"} do |form|
+
+= form_for @mep_audio, url: {action: action_name} do |form|
+  - if @mep_audio.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@mep_audio.errors.count, "errors")
+        prohibited this mep from being saved:
+      %ul
+        - @mep_audio.errors.full_messages.each do |msg|
+          %li= msg
+
   %p
     = form.label :bsag_mep_version_id, "Audio Typ"
     = form.collection_select :bsag_audio_type_id, BsagAudioType.order(:id),:id,:name
@@ -46,8 +57,16 @@
     = form.label :bsag_mep_evaluation_id, "Bewertung"
     = form.collection_select :bsag_mep_evaluation_id, BsagMepEvaluation.order(:id),:id,:name
   %p
-    = render 'audio_fault_comments/audio_fault_comment', :audio_fault_comments => @mep_audio.audio_fault_comments, form: form
+    = render 'audio_fault_comments/audio_fault_comment'
+    -#, @mep_audio.audio_fault_comments
+    -#= render 'audio_fault_comments/audio_fault_comment', :audio_fault_comments => @mep_audio.audio_fault_comments, form: form
   %p
-    = render 'audio_fault_comments/form', :locals => {:controller => 'audio_fault_comments', :action => "create"}
+    -#= render 'audio_fault_comments/form', :locals => {:controller => 'audio_fault_comments', :action => "create"}
+    -#= render 'audio_fault_comments/form', f: form
+    = render 'audio_fault_comments/form', fo: form
+
+    -#= form.fields_for @mep_audio.audio_fault_comments.build do |fault_comment|
+      = render 'audio_fault_comments/form', f: fault_comment
+      -#= fault_comment.text_field :comment
   %p
     = form.button :submit, name: :create
