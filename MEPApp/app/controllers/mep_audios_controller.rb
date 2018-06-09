@@ -45,6 +45,10 @@ class MepAudiosController < ActionController::Base
     redirect_to project_project_partial_mep_audios_path
   end
 
+  def destroy_fault_comment
+    binding.pry
+  end
+
   private
     def mep_audio_params
       params.require(:bsag_mep_audio).permit( :bsag_project_partial_id,

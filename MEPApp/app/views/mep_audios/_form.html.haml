@@ -57,13 +57,17 @@
     = form.label :bsag_mep_evaluation_id, "Bewertung"
     = form.collection_select :bsag_mep_evaluation_id, BsagMepEvaluation.order(:id),:id,:name
   %p
-    = render 'audio_fault_comments/audio_fault_comment'
+    = form.fields_for :audio_fault_comments do |builder|
+      = render 'audio_fault_fields', f: builder
+    = link_to_add_fields "Add fault comment", form, :audio_fault_comments
+    -#= form.fields_for :audio_fault_comments
+    -#= render 'audio_fault_comments/audio_fault_comment'
     -#, @mep_audio.audio_fault_comments
     -#= render 'audio_fault_comments/audio_fault_comment', :audio_fault_comments => @mep_audio.audio_fault_comments, form: form
   %p
     -#= render 'audio_fault_comments/form', :locals => {:controller => 'audio_fault_comments', :action => "create"}
     -#= render 'audio_fault_comments/form', f: form
-    = render 'audio_fault_comments/form', fo: form
+    -#= render 'audio_fault_comments/form', fo: form
 
     -#= form.fields_for @mep_audio.audio_fault_comments.build do |fault_comment|
       = render 'audio_fault_comments/form', f: fault_comment
