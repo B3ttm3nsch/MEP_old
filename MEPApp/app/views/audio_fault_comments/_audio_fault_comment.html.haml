@@ -1,0 +1,18 @@
+-# @mep_audio.audio_fault_comments.each do |fault_comment|
+  = fields_for fault_comment do |form|
+    %p
+      = form.label :bsag_audio_fault_id
+      = form.collection_select :bsag_audio_fault_id, BsagAudioFault.order(:name), :id, :name
+      = form.label :comment
+      = form.text_field :comment
+      -#= link_to 'delete', :method => :delete, [ params[:project_id], params[:proect_partial_id], params[:mep_audio_id], params[:id] ]
+
+      -#= button_to 'delete', method: :delete, controller: 'audio_fault_comments', :params => {mep_audio_id: @mep_audio.id}
+      = button_to 'delete', project_project_partial_mep_audio_audio_fault_comment_path(@mep_audio.project_partial.project_id, @mep_audio.project_partial.id, @mep_audio.id, fault_comment.id), method: :delete, data: { confirm: 'Are you sure?' }
+%fieldset
+  = f.label :bsag_audio_fault_id
+  = f.collection_select :bsag_audio_fault_id, BsagAudioFault.order(:name), :id, :name
+  = f.label :comment
+  = f.text_field :comment
+  = f.hidden_field :_destroy
+  = link_to 'remove', '#'

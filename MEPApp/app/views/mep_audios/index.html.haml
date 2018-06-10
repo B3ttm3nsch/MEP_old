@@ -1,1 +1,22 @@
-= link_to 'New MEP', new_project_project_partial_mep_audio_path
+%h1 MEPs
+
+%table
+  .container-fluid
+    .table-responsive
+      .table
+        %thead
+          %tr
+            %th ID
+            %th Show
+            %td Edit
+            %td Destroy
+
+        %tbody
+          - @mep_audios.each do |mep_audio|
+            %tr
+              %td= mep_audio.id
+              %td= link_to 'Show', project_project_partial_mep_audio_path(mep_audio.project_partial.project, mep_audio.project_partial, mep_audio)
+              %td= link_to 'Edit', edit_project_project_partial_mep_audio_path(mep_audio.project_partial.project, mep_audio.project_partial, mep_audio)
+              %td= button_to 'delete', project_project_partial_mep_audio_path(mep_audio.project_partial.project, mep_audio.project_partial, mep_audio), method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to 'New MEP', new_project_project_partial_mep_audio_path(@project_partial.project_id, @project_partial)

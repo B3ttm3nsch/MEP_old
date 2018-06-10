@@ -1,7 +1,8 @@
 class ProjectPartialsController < ActionController::Base
   def index
-  #  @project = Tblproject.find(params[:project_id])
-    @project_partials = Tblproject.find(params[:project_id]).project_partials
+    @project = Tblproject.find(params[:project_id])
+    @project_partials = @project.project_partials.all
+      #@project_partials = Tblproject.find(params[:project_id]).project_partials
   end
 
   def show
