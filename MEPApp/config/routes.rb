@@ -59,7 +59,8 @@ Rails.application.routes.draw do
   resources :projects do
     resources :project_partials do
       resources :mep_audios do
-        get 'audio_fault_comments', on: :member
+        resources :audio_fault_comments
+        #get 'audio_fault_comments', on: :member
       end
     end
   end

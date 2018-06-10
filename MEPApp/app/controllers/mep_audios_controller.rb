@@ -40,6 +40,7 @@ class MepAudiosController < ActionController::Base
   end
 
   def destroy
+    binding.pry
     @mep_audio = BsagMepAudio.find(params[:id])
     @mep_audio.destroy
     redirect_to project_project_partial_mep_audios_path
